@@ -17,7 +17,47 @@
         background: #0a0a0a;
         color: white;
       }
+/* FUTURISTIC GOOGLE DOCS BUTTON */
+.btn-gdocs {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  background: linear-gradient(45deg, rgba(0,255,255,0.1), rgba(0,255,255,0.05));
+  box-shadow: 0 0 15px rgba(0,255,255,0.4), 0 0 30px rgba(0,255,255,0.2) inset;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
 
+.btn-gdocs:hover {
+  color: #ff00ff;
+  border-color: #ff00ff;
+  box-shadow: 0 0 25px #ff00ff, 0 0 40px #ff00ff inset;
+  transform: scale(1.05);
+}
+
+/* subtle animated glow */
+.btn-gdocs::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,255,255,0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-gdocs:hover::before {
+  opacity: 1;
+  }
       /* HERO SECTION */
       .hero {
         height: 100vh;
@@ -210,6 +250,22 @@ body.light footer {
           <li>Why Do Mosquitoes Prefer Certain People? (Biology)</li>
           <li>The Wi-Fi Corner Paradox (Physics)</li>
         </ul>
+      </div>
+    </div>
+    <div class="ace">
+      <div class="ace-content">
+        <p>Find the upgraded Wi-Fi file on,.https://docs.google.com/document/d/1FqcShftRxZ-rqUJSRUi5ZgkCJPJJcPACOWQsWK3x2gc/edit?usp=drivesdk or click the button below 👇 </p>
+        <a href="https://docs.google.com/document/d/1FqcShftRxZ-rqUJSRUi5ZgkCJPJJcPACOWQsWK3x2gc/edit?usp=drivesdk" 
+   target="_blank" 
+   class="btn-gdocs">
+   Open Docs for Wi-Fi ⚡
+        </a>
+        <p>Find the upgraded Mosquito file on.https://docs.google.com/document/d/13HTWsPSSLpuusYMLyNIUv61NaUqfcVogToY1rR3zlyk/edit?usp=drivesdk or click the button below 👇</p>
+        <a href="https://docs.google.com/document/d/13HTWsPSSLpuusYMLyNIUv61NaUqfcVogToY1rR3zlyk/edit?usp=drivesdk" 
+   target="_blank" 
+   class="btn-gdocs">
+   Open Docs for Mosquitoes ⚡
+        </a>
       </div>
     </div>
 <footer class="footer">
