@@ -25,6 +25,7 @@
   font-weight: bold;
   color: #00ffff;
   text-decoration: none;
+  margin-top: 40px;
   text-transform: uppercase;
   border: 2px solid #00ffff;
   border-radius: 12px;
@@ -69,17 +70,26 @@
         background: radial-gradient(circle at center, #111, #000);
       }
 
-      .hero img {
-        width: 180px;
-        margin-top: 20px;
-        filter: drop-shadow(0 0 20px cyan);
-      }
+.hero img {
+    width: 250px; /* bigger than before */
+    max-width: 80vw; /* responsive: never exceeds 80% of screen width */
+    margin-top: 20px;
+    filter: drop-shadow(0 0 25px cyan);
+    transition: transform 0.5s;
+}
 
       .hero h1 {
         font-size: 3rem;
         background: linear-gradient(90deg, cyan, purple);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: pulse 3s infinite;
+      }
+      /* Pulsing hero title */
+      @keyframes pulse {
+        0% { text-shadow: 0 0 10px cyan; }
+        50% { text-shadow: 0 0 30px cyan, 0 0 50px blue; }
+        100% { text-shadow: 0 0 10px cyan; }
       }
 
       .hero p {
@@ -98,8 +108,9 @@
         background: rgba(255, 255, 255, 0.05);
         padding: 25px;
         border-radius: 15px;
-        width: 90%;
-        max-width: 500px;
+        width: 100%;
+  max-width: 500px;
+  word-wrap: break-word;
         backdrop-filter: blur(10px);
         box-shadow: 0 0 20px rgba(0,255,255,0.1);
         transition: 0.3s;
@@ -254,12 +265,18 @@ body.light footer {
     </div>
     <div class="ace">
       <div class="ace-content">
+        <h2>Original Wi-Fi file</h2>
         <p>Find the upgraded Wi-Fi file on,.https://docs.google.com/document/d/1FqcShftRxZ-rqUJSRUi5ZgkCJPJJcPACOWQsWK3x2gc/edit?usp=drivesdk or click the button below 👇 </p>
         <a href="https://docs.google.com/document/d/1FqcShftRxZ-rqUJSRUi5ZgkCJPJJcPACOWQsWK3x2gc/edit?usp=drivesdk" 
    target="_blank" 
    class="btn-gdocs">
    Open Docs for Wi-Fi ⚡
         </a>
+      </div>
+    </div>
+    <div class="ace">
+      <div class="ace-content">
+                <h2>Original Mosquito file</h2>
         <p>Find the upgraded Mosquito file on.https://docs.google.com/document/d/13HTWsPSSLpuusYMLyNIUv61NaUqfcVogToY1rR3zlyk/edit?usp=drivesdk or click the button below 👇</p>
         <a href="https://docs.google.com/document/d/13HTWsPSSLpuusYMLyNIUv61NaUqfcVogToY1rR3zlyk/edit?usp=drivesdk" 
    target="_blank" 
@@ -299,4 +316,4 @@ toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('light');
 });
 </script>
-</html>
+    </html>
