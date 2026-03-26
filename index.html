@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUANTUM TITANS 2026</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+      }
+
+      body {
+        background: #0a0a0a;
+        color: white;
+      }
+
+      /* HERO SECTION */
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background: radial-gradient(circle at center, #111, #000);
+      }
+
+      .hero img {
+        width: 180px;
+        margin-top: 20px;
+        filter: drop-shadow(0 0 20px cyan);
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        background: linear-gradient(90deg, cyan, purple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero p {
+        opacity: 0.7;
+        margin-top: 10px;
+      }
+
+      /* SECTION CARDS */
+      .ace {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .ace-content {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 25px;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 500px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0,255,255,0.1);
+        transition: 0.3s;
+      }
+
+      .ace-content:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 30px rgba(0,255,255,0.3);
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        color: cyan;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      ul li {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, transparent, cyan, transparent);
+        margin: 20px;
+      }
+      /* FOOTER */
+.footer {
+  margin-top: 40px;
+  padding: 40px 20px;
+  background: #050505;
+  border-top: 1px solid rgba(0,255,255,0.2);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  color: cyan;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* glowing hover effect */
+.footer-section:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+/* THEME TOGGLE STYLES */
+
+/* Default (dark) is already your body */
+body.light {
+  background: #f0f0f0;
+  color: #0a0a0a;
+}
+
+body.light .hero {
+  background: radial-gradient(circle at center, #fff, #ddd);
+}
+
+body.light .hero h1 {
+  background: linear-gradient(90deg, purple, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.light .ace-content {
+  background: rgba(0,0,0,0.05);
+  color: #0a0a0a;
+  box-shadow: 0 0 20px rgba(255,0,255,0.1);
+}
+
+body.light footer {
+  background: #e5e5e5;
+  color: #0a0a0a;
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Toggle button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: rgba(0,255,255,0.1);
+  color: cyan;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
+  transition: 0.3s;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0,255,255,0.6);
+}
+
+    </style>
+  </head>
+
+  <body>
+<button id="theme-toggle">🌗 Toggle Theme</button>
+    <div class="hero">
+      <h1>QUANTUM TITANS</h1>
+      <p>Innovators Club • 2026</p>
+      <img src="images/titans.png" alt="Quantum Titans Logo">
+    </div>
+
+    <div class="ace">
+      <div class="ace-content">
+        <h2>Core Team</h2>
+        <ul>
+          <li>Akampumuza Belay</li>
+          <li>Luboobi John Kelly</li>
+          <li>Okech Gwom Andrew</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="ace">
+      <div class="ace-content">
+        <h2>Items Attempted (Regional Competitions)</h2>
+        <ul>
+          <li>Why Do Mosquitoes Prefer Certain People? (Biology)</li>
+          <li>The Wi-Fi Corner Paradox (Physics)</li>
+        </ul>
+      </div>
+    </div>
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div class="footer-section">
+      <h3>Quantum Titans</h3>
+      <p>Innovators Club • Luzira Secondary School</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>innovatorslss@gmail.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Mission</h3>
+      <p>Engineering the future through science, creativity, and innovation.</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Quantum Titans • All systems active ⚡</p>
+  </div>
+</footer>
+  </body>
+  <script>
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+});
+</script>
+</html>
