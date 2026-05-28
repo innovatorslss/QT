@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="QUANTUM TITANS convergence hub">
+<title>QUANTUM TITANS • Convergence Point</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#060816;
+  --bg2:#0d1228;
+  --text:#eef3ff;
+  --primary:#00e5ff;
+  --secondary:#a855f7;
+  --card:rgba(255,255,255,0.06);
+  --border:rgba(0,229,255,0.3);
+  --shadow:0 0 25px rgba(0,229,255,0.25);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+  radial-gradient(circle at top right, rgba(0,229,255,0.15), transparent 30%),
+  radial-gradient(circle at bottom left, rgba(168,85,247,0.12), transparent 30%),
+  var(--bg);
+  color:var(--text);
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+  linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:40px 40px;
+  z-index:-2;
+}
+
+/* ===== NAVBAR ===== */
+
+nav{
+  width:100%;
+  padding:18px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,0.25);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+  font-family:'Orbitron',sans-serif;
+  font-size:1.2rem;
+  letter-spacing:3px;
+  color:var(--primary);
+  text-shadow:0 0 12px var(--primary);
+}
+
+.nav-actions{
+  display:flex;
+  gap:12px;
+}
+
+.nav-btn{
+  border:none;
+  padding:12px 18px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.06);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+
+/* ===== SIDE PANEL ===== */
+
+.menu-panel{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:75%;
+  height:100vh;
+  background:rgba(5,10,25,0.97);
+  backdrop-filter:blur(20px);
+  z-index:2000;
+  transition:0.5s;
+  padding:40px;
+  border-left:1px solid rgba(255,255,255,0.1);
+  overflow-y:auto;
+}
+
+.menu-panel.active{
+  right:0;
+}
+
+.close-btn{
+  font-size:2rem;
+  cursor:pointer;
+  color:var(--primary);
+  margin-bottom:30px;
+}
+
+.menu-panel h2{
+  font-family:'Orbitron';
+  margin-bottom:30px;
+  color:var(--primary);
+}
+
+.menu-links{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.menu-links a{
+  text-decoration:none;
+  color:white;
+  font-size:1.2rem;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.04);
+  transition:0.3s;
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+.menu-links a:hover{
+  transform:translateX(10px);
+  background:rgba(0,229,255,0.08);
+  box-shadow:var(--shadow);
+}
+
+/* ===== HERO ===== */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  padding:120px 20px 80px;
+  position:relative;
+}
+
+.hero-ring{
+  position:absolute;
+  width:420px;
+  height:420px;
+  border:2px solid rgba(0,229,255,0.18);
+  border-radius:50%;
+  animation:spin 20s linear infinite;
+  box-shadow:
+  0 0 40px rgba(0,229,255,0.2),
+  inset 0 0 30px rgba(0,229,255,0.1);
+  z-index: 1;
+}
+
+.hero-ring::before{
+  content:'';
+  position:absolute;
+  inset:30px;
+  border:2px dashed rgba(168,85,247,0.3);
+  border-radius:50%;
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+.hero h1{
+  font-size:5rem;
+  font-family:'Orbitron';
+  letter-spacing:5px;
+  z-index:2;
+  background:linear-gradient(90deg,var(--primary),white,var(--secondary));
+  -webkit-background-clip:text;
+  color:transparent;
+  text-shadow:0 0 20px rgba(0,229,255,0.3);
+}
+
+.hero p{
+  margin-top:25px;
+  max-width:700px;
+  line-height:1.8;
+  color:#cdd7ff;
+  z-index:2;
+}
+
+.hero-buttons{
+  margin-top:35px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+  z-index:2;
+}
+
+.hero-buttons button{
+  padding:16px 26px;
+  border:none;
+  border-radius:18px;
+  background:rgba(255,255,255,0.08);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  border:1px solid var(--border);
+  backdrop-filter:blur(10px);
+}
+
+.hero-buttons button:hover{
+  transform:translateY(-5px) scale(1.03);
+  box-shadow:var(--shadow);
+}
+
+/* ===== INFO CARDS ===== */
+
+.section-title{
+  text-align:center;
+  font-family:'Orbitron';
+  font-size:2rem;
+  margin-bottom:50px;
+  color:var(--primary);
+}
+
+.cards-section{
+  padding:80px 40px;
+}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.info-card{
+  position:relative;
+  overflow:hidden;
+  padding:30px;
+  border-radius:28px;
+  background:var(--card);
+  border:1px solid var(--border);
+  backdrop-filter:blur(15px);
+  transition:0.4s;
+  min-height:260px;
+}
+
+.info-card::before{
+  content:'';
+  position:absolute;
+  width:180px;
+  height:180px;
+  background:radial-gradient(circle, rgba(0,229,255,0.2), transparent 70%);
+  top:-50px;
+  right:-50px;
+}
+
+.info-card:hover{
+  transform:translateY(-10px);
+  box-shadow:
+  0 15px 40px rgba(0,0,0,0.4),
+  0 0 25px rgba(0,229,255,0.25);
+}
+
+.card-icon{
+  font-size:2.8rem;
+  margin-bottom:18px;
+}
+
+.info-card h3{
+  font-family:'Orbitron';
+  margin-bottom:15px;
+  color:var(--primary);
+}
+
+.info-card p{
+  color:#d9e3ff;
+  line-height:1.7;
+}
+
+.card-tag{
+  margin-top:20px;
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.08);
+  font-size:0.8rem;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+  margin-top:80px;
+  padding:50px 30px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(10px);
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:30px;
+}
+
+.footer-box{
+  padding:20px;
+  border-radius:20px;
+  transition:0.3s;
+}
+
+.footer-box:hover{
+  background:rgba(255,255,255,0.04);
+  transform:translateY(-5px);
+}
+
+.footer-box h4{
+  margin-bottom:15px;
+  color:var(--primary);
+  font-family:'Orbitron';
+}
+
+.footer-box p,
+.footer-box a{
+  color:#cdd7ff;
+  text-decoration:none;
+  line-height:1.8;
+}
+
+.rights{
+  text-align:center;
+  margin-top:40px;
+  color:#9bb0ff;
+  font-size:0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+  .hero h1{
+    font-size:3rem;
+  }
+
+  .hero-ring{
+    width:300px;
+    height:300px;
+  }
+
+  .menu-panel{
+    width:100%;
+  }
+
+  nav{
+    padding:18px 20px;
+  }
+
+  .cards-section{
+    padding:60px 20px;
+  }
+}
+.research-box{
+  max-width:600px;
+  margin:40px auto;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(0,255,255,0.3);
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 20px rgba(0,255,255,0.15);
+  color:white;
+}
+.research-box h2 {
+  color:#00e5ff;
+  margin-bottom: 15px;
+  font-family: Orbitron, sans-serif;
+  text-align: center;
+}
+.research-box h3{
+  color:#00e5ff;
+  margin-bottom:15px;
+  font-family:Orbitron, sans-serif;
+}
+.research-box strong{
+  font-family: brush-script, cursive;
+  color: #00e5ff;
+  margin-bottom:15px;
+  font-size:1.5rem;
+}
+.research-box p{
+  line-height:1.6;
+  font-family: papyrus, fantasy;
+
+}
+
+.hidden{
+  display:none;
+}
+
+button{
+  margin-top:15px;
+  padding:12px 18px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  background:linear-gradient(90deg,#00e5ff,#a855f7);
+  color:black;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px rgba(0,229,255,0.5);
+}
+.research-image{
+  width:100%;
+  margin:20px 0;
+  border-radius:18px;
+  border:1px solid rgba(0,229,255,0.25);
+  box-shadow:0 0 20px rgba(0,229,255,0.15);
+}
+.hero-logo{
+  position:absolute;
+  width:240px;
+  opacity:0.18;
+  z-index:0;
+  filter:
+    drop-shadow(0 0 25px rgba(0,229,255,0.4));
+  animation:floatLogo 6s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0px);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+
+<nav>
+  <div class="logo">QUANTUM TITANS</div>
+
+  <div class="nav-actions">
+    <button class="nav-btn" id="themeBtn">🎨 Theme</button>
+    <button class="nav-btn" id="menuBtn">☰ Menu</button>
+  </div>
+</nav>
+
+<!-- ===== MENU PANEL ===== -->
+
+<div class="menu-panel" id="menuPanel">
+
+  <div class="close-btn" id="closeBtn">✕</div>
+
+  <h2>CONVERGENCE MENU</h2>
+
+  <div class="menu-links">
+    <a href="#">📜 History</a>
+    <a href="#">🖼 Gallery</a>
+    <a href="#">🏆 Achievements</a>
+    <a href="#">🧠 Innovators</a>
+    <a href="#">📡 Communicate</a>
+  </div>
+
+</div>
+
+<!-- ===== HERO ===== -->
+
+<section class="hero">
+<img src="titans.png" alt="Quantum Titans Logo" class="hero-logo">
+  <div class="hero-ring"></div>
+
+  <h1>QUANTUM TITANS</h1>
+
+  <p>
+    A futuristic convergence point where innovators, inventors,
+    strategists and creators synchronize ideas into one evolving network.
+  </p>
+
+  <div class="hero-buttons">
+    <button>ENTER NETWORK</button>
+    <button>EXPLORE TITANS</button>
+    <button>ACTIVATE HUB</button>
+  </div>
+
+</section>
+
+<!-- ===== CARDS ===== -->
+
+<section class="cards-section">
+
+  <h2 class="section-title">TITAN CORE MODULES</h2>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <div class="card-icon">⚛️</div>
+      <h3>Innovation Reactor</h3>
+      <p>
+        A vault for the team's umcanny reports generally to ease accessibility.
+      </p>
+      <div class="card-tag">ACTIVE RESEARCH</div>
+    </div>
+
+    <div class="info-card">
+      <div class="card-icon">🧠</div>
+      <h3>Mind Nexus</h3>
+      <p>
+        A synchronized intelligence zone where ideas converge and evolve into powerful solutions, conquring what comes our way.
+      </p>
+      <div class="card-tag">NEURAL SYNC</div>
+    </div>
+
+    <div class="info-card">
+      <div class="card-icon">🚀</div>
+      <h3>Mission Control</h3>
+      <p>
+        Organize objectives, track achievements and coordinate strategic operations across the Team Titan network.
+      </p>
+      <div class="card-tag">LIVE STATUS</div>
+    </div>
+
+    <div class="info-card">
+      <div class="card-icon">📡</div>
+      <h3>Communication Grid</h3>
+      <p>
+        Encrypted channels for discussions, collaboration and real-time convergence between members.
+      </p>
+      <div class="card-tag">SECURE LINK</div>
+    </div>
+
+  </div>
+<div class="research-box">
+  <h3>🧠 Competition Research File 1</h3>
+  <h2>PATTERNS IN CRACKING</h2>
+
+  <p id="preview">
+    This file contains the scientific investigation of crack formation in drying materials.
+    Click “Grant Access” to view full research data.
+  </p>
+<img src="ptn.png" alt="Patterns in Cracking Diagram" class="research-image">
+  <p id="fullText" class="hidden">
+
+    <strong>FULL RESEARCH REPORT</strong><br><br>
+
+    <strong>1. SCIENTIFIC EXPLANATION</strong><br>
+    When mud, paint, clay, or coatings dry, they lose water or solvent and shrink.<br>
+    However, the surface is usually stuck to a substrate beneath it.<br>
+    This means the material wants to contract but cannot move freely.<br>
+    As a result, internal stress builds up in the layer.<br>
+    When this stress exceeds the material’s strength, the layer fractures.<br><br>
+
+    Cracks form as a way of releasing stored elastic energy.<br><br>
+
+    <strong>Core Physics Behind Cracking</strong><br><br>
+
+    <strong>1. Shrinkage</strong><br>
+    Drying removes liquid, causing particles to move closer together and volume to decrease.<br><br>
+
+    <strong>2. Tensile Stress</strong><br>
+    The adhesion to the surface prevents free contraction, creating pulling (tensile) forces inside the layer.<br><br>
+
+    <strong>3. Fracture</strong><br>
+    When tensile stress exceeds fracture strength, cracking occurs.<br><br>
+
+    Stress condition:<br>
+    Stress > Strength of material<br><br>
+
+    <strong>2. FACTORS AFFECTING CRACK PATTERNS</strong><br><br>
+
+    - Thickness of coating → thicker layers form wider cracks<br>
+    - Drying speed → faster drying increases crack density<br>
+    - Humidity → low humidity increases cracking<br>
+    - Temperature → higher temperature accelerates evaporation<br>
+    - Material stiffness → brittle materials crack more easily<br>
+    - Surface adhesion → stronger adhesion increases stress<br>
+    - Particle size → affects crack spacing<br><br>
+
+    <strong>3. SCIENTIFIC HYPOTHESIS</strong><br>
+    Faster drying and increased thickness or brittleness lead to greater internal stress, resulting in more extensive cracking patterns.<br><br>
+
+    <strong>4. EXPERIMENTAL INVESTIGATION</strong><br><br>
+
+    <strong>Aim:</strong><br>
+    To investigate how drying conditions affect crack formation patterns in coatings.<br><br>
+
+    <strong>Materials:</strong><br>
+    Mud or clay, paint (optional), plastic trays, water, hair dryer or sunlight, ruler, camera, thermometer, stopwatch<br><br>
+
+    <strong>Variables:</strong><br><br>
+
+    <u>Independent Variables:</u><br>
+    - Thickness of layer<br>
+    - Temperature<br>
+    - Drying speed<br>
+    - Water content<br><br>
+
+    <u>Dependent Variables:</u><br>
+    - Number of cracks<br>
+    - Crack width<br>
+    - Crack spacing<br>
+    - Time before cracking occurs<br><br>
+
+    <u>Controlled Variables:</u><br>
+    - Same container<br>
+    - Same material type<br>
+    - Same surface area<br><br>
+
+    <strong>Procedure:</strong><br><br>
+
+    1. Prepare three layers of mud: thin, medium, and thick.<br>
+    2. Allow them to dry under identical conditions.<br>
+    3. Observe time taken for cracks to appear and the resulting patterns.<br><br>
+
+    4. Prepare identical samples again.<br>
+    5. Dry one naturally and another using heat (sun or hair dryer).<br>
+    6. Compare crack density and spacing.<br><br>
+
+    <strong>5. EXPECTED RESULTS</strong><br><br>
+
+    - Thick coating → large polygonal cracks<br>
+    - Thin coating → fine crack networks<br>
+    - Fast drying → dense cracks<br>
+    - Slow drying → fewer cracks<br>
+    - Brittle material → sharp fracture patterns<br><br>
+
+    <strong>6. SCIENCE OF POLYGON CRACKS</strong><br>
+    Crack networks often form polygons because stress redistributes evenly across the surface.<br>
+    The system naturally minimizes energy, creating stable geometric patterns similar to:<br><br>
+
+    - dried lake beds<br>
+    - cooling lava<br>
+    - old paint surfaces<br>
+    - crocodile skin textures 🌍<br><br>
+
+    <strong>7. ADVANCED PHYSICS IDEA</strong><br>
+    Stress in a drying layer can be related to material stiffness and strain:<br><br>
+
+    A stiffer material stores more elastic energy before cracking.<br><br>
+
+    Crack spacing increases with layer thickness:<br>
+    thicker layers → larger polygon networks<br><br>
+
+    <strong>8. REAL-WORLD APPLICATIONS</strong><br><br>
+
+    - Paint engineering<br>
+    - Road surface durability<br>
+    - Ceramic production<br>
+    - Pharmaceutical drying processes<br>
+    - Soil and geology studies<br>
+    - Battery coating technology<br>
+    - Spacecraft material design 🚀<br><br>
+
+    <strong>9. CONCLUSION</strong><br>
+    Cracking patterns form when drying materials shrink but are constrained by adhesion to a surface.<br>
+    This produces tensile stress which eventually exceeds material strength, leading to fracture.<br>
+    Environmental conditions and material properties determine how stress distributes, controlling crack size, spacing, and geometry.<br>
+
+  </p>
+
+  <button id="accessBtn">🔓 GRANT ACCESS</button>
+</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+  <div class="footer-grid">
+
+    <div class="footer-box">
+      <h4>About</h4>
+      <p>
+        QUANTUM TITANS is a futuristic collaboration ecosystem built for innovators and creators.
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Navigation</h4>
+      <p><a href="#">History</a></p>
+      <p><a href="#">Gallery</a></p>
+      <p><a href="#">Achievements</a></p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Communications</h4>
+      <p>Quantum Signal: Stable</p>
+      <p>Titan Link: Online</p>
+      <p>Network Integrity: 99%</p>
+    </div>
+
+  </div>
+
+  <div class="rights">
+    QUANTUM TITANS ® | ALL RIGHTS RESERVED | BUILDING THE FUTURE
+  </div>
+
+</footer>
+
+<script>
+
+const menuBtn = document.getElementById('menuBtn');
+const closeBtn = document.getElementById('closeBtn');
+const menuPanel = document.getElementById('menuPanel');
+
+menuBtn.onclick = () => {
+  menuPanel.classList.add('active');
+}
+
+closeBtn.onclick = () => {
+  menuPanel.classList.remove('active');
+}
+
+/* ===== THEME SWITCHER ===== */
+
+const themeBtn = document.getElementById('themeBtn');
+
+const themes = [
+  {
+    primary:'#00e5ff',
+    secondary:'#a855f7',
+    bg:'#060816'
+  },
+  {
+    primary:'#00ff88',
+    secondary:'#00bfff',
+    bg:'#03140d'
+  },
+  {
+    primary:'#ff4fd8',
+    secondary:'#8b5cf6',
+    bg:'#130312'
+  },
+  {
+    primary:'#ffaa00',
+    secondary:'#ff5500',
+    bg:'#161005'
+  }
+];
+
+let currentTheme = 0;
+
+function applyTheme(theme){
+  document.documentElement.style.setProperty('--primary', theme.primary);
+  document.documentElement.style.setProperty('--secondary', theme.secondary);
+  document.documentElement.style.setProperty('--bg', theme.bg);
+}
+
+applyTheme(themes[0]);
+
+themeBtn.addEventListener('click', ()=>{
+  currentTheme++;
+
+  if(currentTheme >= themes.length){
+    currentTheme = 0;
+  }
+
+  applyTheme(themes[currentTheme]);
+});
+
+</script>
+<script>
+const btn = document.getElementById("accessBtn");
+const fullText = document.getElementById("fullText");
+
+let opened = false;
+
+btn.addEventListener("click", () => {
+  opened = !opened;
+
+  if(opened){
+    fullText.classList.remove("hidden");
+    btn.innerText = "🔒 REVOKE ACCESS";
+  } else {
+    fullText.classList.add("hidden");
+    btn.innerText = "🔓 GRANT ACCESS";
+  }
+});
+</script>
+</body>
+</html>
