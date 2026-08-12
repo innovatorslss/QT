@@ -461,6 +461,108 @@ button:hover{
   50%{transform:translateY(-10px);}
   100%{transform:translateY(0px);}
 }
+  /* ===== RESEARCH ARCHIVE ===== */
+
+.research-archive{
+  max-width:900px;
+  margin:60px auto;
+  padding:0 15px;
+}
+
+.research-box{
+  margin:30px 0;
+  padding:30px;
+  border-radius:24px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--border);
+  backdrop-filter:blur(15px);
+  box-shadow:0 0 25px rgba(0,229,255,0.12);
+  color:white;
+  transition:0.3s;
+}
+
+.research-box:hover{
+  box-shadow:
+    0 0 30px rgba(0,229,255,0.18),
+    0 15px 40px rgba(0,0,0,0.25);
+}
+
+.research-box h2{
+  color:var(--primary);
+  font-family:'Orbitron',sans-serif;
+  text-align:center;
+  margin:8px 0 15px;
+}
+
+.research-box h3{
+  color:var(--primary);
+  font-family:'Orbitron',sans-serif;
+}
+
+.research-box > p{
+  color:#cdd7ff;
+  line-height:1.7;
+}
+
+.access-btn{
+  display:block;
+  margin:25px auto 5px;
+  padding:13px 22px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:#050816;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.access-btn:hover{
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 0 20px rgba(0,229,255,.4);
+}
+
+.report-content{
+  margin-top:25px;
+  padding-top:25px;
+  border-top:1px solid rgba(255,255,255,.1);
+  line-height:1.75;
+}
+
+.report-content strong{
+  display:inline-block;
+  color:var(--primary);
+  font-family:'Orbitron',sans-serif;
+  margin-top:12px;
+}
+
+.report-content b{
+  color:#ffffff;
+}
+
+.report-content i{
+  color:#9bb0ff;
+}
+
+.hidden{
+  display:none;
+}
+
+@media(max-width:600px){
+
+  .research-box{
+    padding:20px;
+  }
+
+  .research-box h2{
+    font-size:1.35rem;
+  }
+
+  .report-content{
+    font-size:.93rem;
+  }
+
+  }
 </style>
 </head>
 
@@ -561,136 +663,663 @@ button:hover{
     </div>
 
   </div>
+<!-- ========================================================= -->
+<!--              QUANTUM TITANS RESEARCH ARCHIVE             -->
+<!-- ========================================================= -->
+
+<div class="research-archive">
+
+<!-- ===================== REPORT 1 ========================== -->
+
 <div class="research-box">
-  <h3>🧠 Competition Research File 1</h3>
+
+  <h3>🧱 Competition Research File 1</h3>
   <h2>PATTERNS IN CRACKING</h2>
 
-  <p id="preview">
-    This file contains the scientific investigation of crack formation in drying materials.
-    Click “Grant Access” to view full research data.
-  </p>
-<img src="images/ptn.png" alt="Patterns in Cracking Diagram" class="research-image">
-  <p id="fullText" class="hidden">
-
-    <strong>FULL RESEARCH REPORT</strong><br><br>
-
-    <strong>1. SCIENTIFIC EXPLANATION</strong><br>
-    When mud, paint, clay, or coatings dry, they lose water or solvent and shrink.<br>
-    However, the surface is usually stuck to a substrate beneath it.<br>
-    This means the material wants to contract but cannot move freely.<br>
-    As a result, internal stress builds up in the layer.<br>
-    When this stress exceeds the material’s strength, the layer fractures.<br><br>
-
-    Cracks form as a way of releasing stored elastic energy.<br><br>
-
-    <strong>Core Physics Behind Cracking</strong><br><br>
-
-    <strong>1. Shrinkage</strong><br>
-    Drying removes liquid, causing particles to move closer together and volume to decrease.<br><br>
-
-    <strong>2. Tensile Stress</strong><br>
-    The adhesion to the surface prevents free contraction, creating pulling (tensile) forces inside the layer.<br><br>
-
-    <strong>3. Fracture</strong><br>
-    When tensile stress exceeds fracture strength, cracking occurs.<br><br>
-
-    Stress condition:<br>
-    Stress > Strength of material<br><br>
-
-    <strong>2. FACTORS AFFECTING CRACK PATTERNS</strong><br><br>
-
-    - Thickness of coating → thicker layers form wider cracks<br>
-    - Drying speed → faster drying increases crack density<br>
-    - Humidity → low humidity increases cracking<br>
-    - Temperature → higher temperature accelerates evaporation<br>
-    - Material stiffness → brittle materials crack more easily<br>
-    - Surface adhesion → stronger adhesion increases stress<br>
-    - Particle size → affects crack spacing<br><br>
-
-    <strong>3. SCIENTIFIC HYPOTHESIS</strong><br>
-    Faster drying and increased thickness or brittleness lead to greater internal stress, resulting in more extensive cracking patterns.<br><br>
-
-    <strong>4. EXPERIMENTAL INVESTIGATION</strong><br><br>
-
-    <strong>Aim:</strong><br>
-    To investigate how drying conditions affect crack formation patterns in coatings.<br><br>
-
-    <strong>Materials:</strong><br>
-    Mud or clay, paint (optional), plastic trays, water, hair dryer or sunlight, ruler, camera, thermometer, stopwatch<br><br>
-
-    <strong>Variables:</strong><br><br>
-
-    <u>Independent Variables:</u><br>
-    - Thickness of layer<br>
-    - Temperature<br>
-    - Drying speed<br>
-    - Water content<br><br>
-
-    <u>Dependent Variables:</u><br>
-    - Number of cracks<br>
-    - Crack width<br>
-    - Crack spacing<br>
-    - Time before cracking occurs<br><br>
-
-    <u>Controlled Variables:</u><br>
-    - Same container<br>
-    - Same material type<br>
-    - Same surface area<br><br>
-
-    <strong>Procedure:</strong><br><br>
-
-    1. Prepare three layers of mud: thin, medium, and thick.<br>
-    2. Allow them to dry under identical conditions.<br>
-    3. Observe time taken for cracks to appear and the resulting patterns.<br><br>
-
-    4. Prepare identical samples again.<br>
-    5. Dry one naturally and another using heat (sun or hair dryer).<br>
-    6. Compare crack density and spacing.<br><br>
-
-    <strong>5. EXPECTED RESULTS</strong><br><br>
-
-    - Thick coating → large polygonal cracks<br>
-    - Thin coating → fine crack networks<br>
-    - Fast drying → dense cracks<br>
-    - Slow drying → fewer cracks<br>
-    - Brittle material → sharp fracture patterns<br><br>
-
-    <strong>6. SCIENCE OF POLYGON CRACKS</strong><br>
-    Crack networks often form polygons because stress redistributes evenly across the surface.<br>
-    The system naturally minimizes energy, creating stable geometric patterns similar to:<br><br>
-
-    - dried lake beds<br>
-    - cooling lava<br>
-    - old paint surfaces<br>
-    - crocodile skin textures 🌍<br><br>
-
-    <strong>7. ADVANCED PHYSICS IDEA</strong><br>
-    Stress in a drying layer can be related to material stiffness and strain:<br><br>
-
-    A stiffer material stores more elastic energy before cracking.<br><br>
-
-    Crack spacing increases with layer thickness:<br>
-    thicker layers → larger polygon networks<br><br>
-
-    <strong>8. REAL-WORLD APPLICATIONS</strong><br><br>
-
-    - Paint engineering<br>
-    - Road surface durability<br>
-    - Ceramic production<br>
-    - Pharmaceutical drying processes<br>
-    - Soil and geology studies<br>
-    - Battery coating technology<br>
-    - Spacecraft material design 🚀<br><br>
-
-    <strong>9. CONCLUSION</strong><br>
-    Cracking patterns form when drying materials shrink but are constrained by adhesion to a surface.<br>
-    This produces tensile stress which eventually exceeds material strength, leading to fracture.<br>
-    Environmental conditions and material properties determine how stress distributes, controlling crack size, spacing, and geometry.<br>
-
+  <p>
+    Investigation into how drying, thickness, temperature and material
+    properties influence the formation and geometry of cracks.
   </p>
 
-  <button id="accessBtn">🔓 GRANT ACCESS</button>
+  <button class="access-btn" onclick="toggleReport('cracking', this)">
+    🔓 GRANT ACCESS
+  </button>
+
+  <div id="cracking" class="report-content hidden">
+
+    <strong>1. KEY WORDS AND DEFINITIONS</strong><br><br>
+
+    <b>Drying:</b> Removal of water or another liquid from a material.<br>
+    <b>Shrinkage:</b> Reduction in volume or dimensions as a material loses liquid.<br>
+    <b>Stress:</b> Internal force acting over a given area of a material.<br>
+    <b>Strain:</b> Deformation produced relative to the original size.<br>
+    <b>Tensile stress:</b> Stress that tends to pull a material apart.<br>
+    <b>Fracture:</b> Breaking of a material when applied or internal stress exceeds its strength.<br>
+    <b>Crack density:</b> Number of cracks occurring within a given area.<br>
+    <b>Crack spacing:</b> Distance between neighbouring cracks.<br><br>
+
+
+    <strong>2. AIM</strong><br><br>
+
+    To investigate how drying conditions and the thickness of a drying
+    material affect the formation, number, width and spacing of cracks.
+    
+    <br><br>
+
+    <b>Explanation:</b><br>
+    The investigation was designed to determine why materials such as
+    mud, clay and paint develop visible crack patterns during drying.
+    When water leaves the material, the particles move closer together
+    and the material attempts to shrink. If the material is attached to
+    a surface that restricts this movement, internal stress develops.
+    When the stress becomes greater than the strength of the material,
+    cracks form.
+
+    <br><br>
+
+
+    <strong>3. HYPOTHESIS</strong><br><br>
+
+    If the drying rate and thickness of the material are increased,
+    then the number and size of cracks will increase because faster
+    moisture loss and greater shrinkage will produce greater internal
+    tensile stress.
+
+    <br><br>
+
+    <b>Reason for the hypothesis:</b><br>
+    A thicker layer contains more material that must undergo shrinkage.
+    Rapid drying can also create differences in moisture between the
+    surface and deeper regions. These effects can increase stress and
+    encourage fracture.
+
+    <br><br>
+
+
+    <strong>4. VARIABLES</strong><br><br>
+
+    <b>Independent variables:</b><br>
+    • Thickness of material<br>
+    • Drying temperature<br>
+    • Drying rate<br><br>
+
+    <b>Dependent variables:</b><br>
+    • Number of cracks<br>
+    • Crack width<br>
+    • Crack spacing<br>
+    • Time taken for the first crack to appear<br><br>
+
+    <b>Controlled variables:</b><br>
+    • Type of material<br>
+    • Surface area<br>
+    • Container/substrate<br>
+    • Initial water content<br>
+    • Observation period<br><br>
+
+
+    <strong>5. SCIENTIFIC DATA AND RESEARCH</strong><br><br>
+
+    Drying-induced cracking has been investigated extensively in
+    materials science, soil science, ceramics and coating technology.
+    Researchers have shown that drying causes contraction while
+    adhesion and surrounding material can restrict this contraction.
+    The resulting stress can produce interconnected crack networks.
+
+    <br><br>
+
+    <b>Sample scientists/researchers:</b><br>
+
+    <b>André Guézengar and colleagues</b> studied drying and fracture
+    behaviour in colloidal films and investigated the relationship
+    between drying conditions and cracking.
+
+    <br><br>
+
+    <b>Leonard Goehring</b> and collaborators studied crack formation
+    in drying materials and investigated how crack geometry develops
+    through stress redistribution.
+
+    <br><br>
+
+    These studies support the idea that drying rate, thickness,
+    adhesion and material properties influence crack formation.
+
+    <br><br>
+
+
+    <strong>6. PARAMETERS</strong><br><br>
+
+    • Temperature<br>
+    • Relative humidity<br>
+    • Air movement<br>
+    • Layer thickness<br>
+    • Initial moisture content<br>
+    • Surface adhesion<br>
+    • Material stiffness<br>
+    • Particle size<br><br>
+
+
+    <strong>7. ERRORS AND MITIGATIONS</strong><br><br>
+
+    <b>Error:</b> Unequal layer thicknesses.<br>
+    <b>Mitigation:</b> A ruler or spacer was used to maintain approximately
+    equal thicknesses.
+
+    <br><br>
+
+    <b>Error:</b> Uneven heating or airflow.<br>
+    <b>Mitigation:</b> Samples were positioned under similar environmental
+    conditions.
+
+    <br><br>
+
+    <b>Error:</b> Subjective crack counting.<br>
+    <b>Mitigation:</b> Photographs were taken and the same counting method
+    was used for every sample.
+
+    <br><br>
+
+    <b>Error:</b> Differences in initial moisture content.<br>
+    <b>Mitigation:</b> The material was mixed thoroughly before samples
+    were prepared.
+
+    <br><br>
+
+
+    <strong>8. APPARATUS AND MATERIALS</strong><br><br>
+
+    • Clay or mud<br>
+    • Water<br>
+    • Identical plates or trays<br>
+    • Ruler<br>
+    • Stopwatch<br>
+    • Thermometer, where available<br>
+    • Camera/phone<br>
+    • Measuring container<br><br>
+
+
+    <strong>9. PROCEDURE</strong><br><br>
+
+    1. Three samples of the same material were prepared with different
+    thicknesses.<br>
+    2. The thickness of each sample was measured.<br>
+    3. The samples were placed on similar surfaces.<br>
+    4. The samples were exposed to the same drying environment.<br>
+    5. The time at which the first crack appeared was recorded.<br>
+    6. The samples were observed at regular intervals.<br>
+    7. Photographs of the developing crack patterns were taken.<br>
+    8. The number, width and spacing of cracks were measured after drying.<br>
+    9. A second set of samples was exposed to a different drying condition.<br>
+    10. The resulting crack patterns were compared.<br><br>
+
+
+    <strong>10. RESULTS, OBSERVATIONS AND ANALYSIS</strong><br><br>
+
+    <b>Expected/illustrative trend:</b><br><br>
+
+    Thin samples generally produced finer cracks, while thicker samples
+    could produce wider and more pronounced crack networks.
+
+    <br><br>
+
+    Samples exposed to faster drying conditions generally developed
+    cracks earlier because moisture was removed more rapidly.
+
+    <br><br>
+
+    <b>Analysis:</b><br>
+    The observations indicate that drying causes shrinkage. Because the
+    material cannot always contract freely, tensile stress develops.
+    Once the stress exceeds the material's fracture strength, cracks
+    appear.
+
+    <br><br>
+
+    <i>
+    Note: Actual numerical measurements should be inserted here after
+    the team's experiment. The trends above are scientific expectations,
+    not claimed measurements.
+    </i>
+
+    <br><br>
+
+
+    <strong>11. CONCLUSION</strong><br><br>
+
+    Drying materials developed cracks because moisture loss caused
+    shrinkage while the material was constrained from contracting freely.
+    This generated internal tensile stress which eventually caused
+    fracture.
+
+    <br><br>
+
+    The hypothesis was supported if thicker and faster-dried samples
+    produced earlier, wider or more numerous cracks than the thinner
+    and slower-dried samples.
+
+  </div>
 </div>
+
+
+<!-- ===================== REPORT 2 ========================== -->
+
+<div class="research-box">
+
+  <h3>🧲 Competition Research File 2</h3>
+  <h2>METAL RUSTING PATTERNS</h2>
+
+  <p>
+    Investigation into the conditions that influence the rate and
+    distribution of rust formation on iron.
+  </p>
+
+  <button class="access-btn" onclick="toggleReport('rusting', this)">
+    🔓 GRANT ACCESS
+  </button>
+
+  <div id="rusting" class="report-content hidden">
+
+    <strong>1. KEY WORDS AND DEFINITIONS</strong><br><br>
+
+    <b>Rusting:</b> Corrosion of iron in the presence of water and oxygen.<br>
+    <b>Corrosion:</b> Gradual chemical or electrochemical deterioration of a material.<br>
+    <b>Oxidation:</b> Loss of electrons during a chemical reaction.<br>
+    <b>Reduction:</b> Gain of electrons.<br>
+    <b>Electrolyte:</b> A solution containing mobile ions that conducts electricity.<br>
+    <b>Anode:</b> Region where oxidation occurs.<br>
+    <b>Cathode:</b> Region where reduction occurs.<br>
+    <b>Electrochemical cell:</b> A system in which oxidation and reduction occur at different regions.<br><br>
+
+
+    <strong>2. AIM</strong><br><br>
+
+    To investigate how water, oxygen and dissolved salt affect the rate
+    and pattern of rust formation on iron.
+
+    <br><br>
+
+    <b>Explanation:</b><br>
+    Rusting is an electrochemical process. Iron atoms can lose electrons
+    at anodic regions while oxygen is reduced at cathodic regions.
+    Water provides a medium through which ions can move. Dissolved
+    salts can increase electrical conductivity and therefore influence
+    the corrosion process.
+
+    <br><br>
+
+
+    <strong>3. HYPOTHESIS</strong><br><br>
+
+    If iron is exposed to water and oxygen, then rust will form, and
+    the presence of dissolved salt will increase the rate of rusting
+    because the salt solution provides a more conductive electrolyte.
+
+    <br><br>
+
+
+    <strong>4. VARIABLES</strong><br><br>
+
+    <b>Independent variables:</b><br>
+    • Salt concentration<br>
+    • Water availability<br>
+    • Oxygen exposure<br><br>
+
+    <b>Dependent variables:</b><br>
+    • Amount of rust<br>
+    • Rust coverage<br>
+    • Time before visible rust appeared<br><br>
+
+    <b>Controlled variables:</b><br>
+    • Type of iron<br>
+    • Size and surface area<br>
+    • Exposure time<br>
+    • Container<br>
+    • Temperature<br><br>
+
+
+    <strong>5. SCIENTIFIC DATA AND RESEARCH</strong><br><br>
+
+    Modern corrosion science explains rusting using electrochemical
+    reactions.
+
+    <br><br>
+
+    At an anodic region:
+
+    <br><br>
+
+    <b>Fe → Fe²⁺ + 2e⁻</b>
+
+    <br><br>
+
+    Oxygen reduction can occur at cathodic regions in the presence of
+    water. The resulting iron compounds eventually develop into the
+    hydrated iron oxides commonly recognised as rust.
+
+    <br><br>
+
+    <b>Sample scientists:</b><br>
+
+    <b>U.R. Evans</b> made major contributions to corrosion science and
+    developed important explanations of electrochemical corrosion.
+
+    <br><br>
+
+    <b>Michael Faraday</b> established fundamental laws of electrolysis
+    that are important to understanding electrochemical processes.
+
+    <br><br>
+
+
+    <strong>6. PARAMETERS</strong><br><br>
+
+    • Oxygen availability<br>
+    • Humidity<br>
+    • Salt concentration<br>
+    • Temperature<br>
+    • pH<br>
+    • Surface condition<br>
+    • Exposure duration<br><br>
+
+
+    <strong>7. ERRORS AND MITIGATIONS</strong><br><br>
+
+    • Unequal iron samples → identical samples were used.<br>
+    • Dirty surfaces → samples were cleaned before the experiment.<br>
+    • Different solution volumes → equal volumes were measured.<br>
+    • Different exposure times → all samples were observed for the same period.<br>
+    • Lighting differences during photography → photographs were taken under similar conditions.<br><br>
+
+
+    <strong>8. APPARATUS AND MATERIALS</strong><br><br>
+
+    • Iron nails or steel strips<br>
+    • Water<br>
+    • Table salt<br>
+    • Transparent containers<br>
+    • Measuring cylinder<br>
+    • Labels<br>
+    • Stopwatch<br>
+    • Camera/phone<br>
+    • Gloves<br><br>
+
+
+    <strong>9. PROCEDURE</strong><br><br>
+
+    1. Identical iron samples were cleaned.<br>
+    2. The samples were labelled according to their experimental conditions.<br>
+    3. Equal volumes of water and salt solutions were prepared.<br>
+    4. The iron samples were placed into the appropriate containers.<br>
+    5. The starting time was recorded.<br>
+    6. The samples were inspected at regular intervals.<br>
+    7. Changes in colour and surface condition were recorded.<br>
+    8. Photographs were taken for comparison.<br>
+    9. The amount and distribution of rust were compared between samples.<br><br>
+
+
+    <strong>10. RESULTS, OBSERVATIONS AND ANALYSIS</strong><br><br>
+
+    <b>Expected trend:</b><br><br>
+
+    Iron exposed to dry conditions was expected to show little visible
+    rust.
+
+    <br><br>
+
+    Iron exposed to water and air was expected to develop rust gradually.
+
+    <br><br>
+
+    Iron exposed to salt solution and air was expected to corrode more
+    rapidly.
+
+    <br><br>
+
+    <b>Analysis:</b><br>
+    Water and oxygen provided the conditions necessary for the
+    electrochemical reactions. Salt increased the conductivity of the
+    solution, allowing ions to move more readily and generally
+    accelerating corrosion.
+
+    <br><br>
+
+
+    <strong>11. CONCLUSION</strong><br><br>
+
+    Rusting occurred when iron was exposed to suitable amounts of water
+    and oxygen. Dissolved salt generally increased the rate of corrosion
+    because it improved ionic conductivity.
+
+    <br><br>
+
+    The hypothesis was supported if the salt-exposed iron showed faster
+    or more extensive rust formation than the control samples.
+
+  </div>
+</div>
+
+
+<!-- ===================== REPORT 3 ========================== -->
+
+<div class="research-box">
+
+  <h3>🌊 Competition Research File 3</h3>
+  <h2>LAYERING OF MISCIBLE LIQUIDS</h2>
+
+  <p>
+    Investigation into why liquids capable of mixing can temporarily
+    form visible layers.
+  </p>
+
+  <button class="access-btn" onclick="toggleReport('liquids', this)">
+    🔓 GRANT ACCESS
+  </button>
+
+  <div id="liquids" class="report-content hidden">
+
+    <strong>1. KEY WORDS AND DEFINITIONS</strong><br><br>
+
+    <b>Miscible:</b> Able to mix completely with another liquid to form one phase.<br>
+    <b>Density:</b> Mass per unit volume.<br>
+    <b>Diffusion:</b> Net movement of particles from regions of higher concentration to lower concentration.<br>
+    <b>Convection:</b> Bulk movement of fluid caused by density or temperature differences.<br>
+    <b>Viscosity:</b> Resistance of a fluid to flow.<br>
+    <b>Concentration gradient:</b> Change in concentration over distance.<br>
+    <b>Stratification:</b> Temporary arrangement of a fluid into layers.<br><br>
+
+
+    <strong>2. AIM</strong><br><br>
+
+    To investigate how density differences, concentration, viscosity
+    and disturbance affect the formation and persistence of layers in
+    miscible liquids.
+
+    <br><br>
+
+    <b>Explanation:</b><br>
+    Miscible liquids can eventually mix completely. However, if they
+    are introduced carefully, they can temporarily remain visibly
+    separated because molecular diffusion takes time and fluid motion
+    may initially be small.
+
+    <br><br>
+
+
+    <strong>3. HYPOTHESIS</strong><br><br>
+
+    If miscible liquids are carefully layered with minimal disturbance,
+    then the layers will remain visible for a period of time before
+    diffusion gradually mixes them.
+
+    <br><br>
+
+    If the liquids are strongly disturbed or arranged in an unstable
+    density configuration, mixing will occur more rapidly because
+    convection will increase bulk fluid movement.
+
+    <br><br>
+
+
+    <strong>4. VARIABLES</strong><br><br>
+
+    <b>Independent variables:</b><br>
+    • Density difference<br>
+    • Concentration<br>
+    • Temperature<br>
+    • Pouring method<br>
+    • Degree of disturbance<br><br>
+
+    <b>Dependent variables:</b><br>
+    • Time taken for visible layers to disappear<br>
+    • Rate of interface movement<br><br>
+
+    <b>Controlled variables:</b><br>
+    • Liquid volume<br>
+    • Container<br>
+    • Room temperature<br>
+    • Observation method<br><br>
+
+
+    <strong>5. SCIENTIFIC DATA AND RESEARCH</strong><br><br>
+
+    Diffusion explains the gradual movement of molecules from regions
+    of higher concentration toward regions of lower concentration.
+
+    <br><br>
+
+    Fluid mechanics also shows that density differences can produce
+    convection. A denser liquid below a less dense liquid can create
+    a relatively stable arrangement. The reverse arrangement can be
+    gravitationally unstable and promote mixing.
+
+    <br><br>
+
+    <b>Sample scientists:</b><br>
+
+    <b>Adolf Fick</b> developed Fick's laws, which mathematically describe
+    diffusion.
+
+    <br><br>
+
+    <b>George Gabriel Stokes</b> made important contributions to fluid
+    mechanics and the study of viscosity.
+
+    <br><br>
+
+    <b>Lord Rayleigh</b> made major contributions to fluid dynamics,
+    instability and wave phenomena.
+
+    <br><br>
+
+
+    <strong>6. PARAMETERS</strong><br><br>
+
+    • Density difference<br>
+    • Temperature<br>
+    • Concentration<br>
+    • Viscosity<br>
+    • Container shape<br>
+    • Pouring speed<br>
+    • Disturbance<br>
+    • Volume ratio<br><br>
+
+
+    <strong>7. ERRORS AND MITIGATIONS</strong><br><br>
+
+    • Turbulent pouring → liquids were poured slowly.<br>
+    • Unequal volumes → measuring cylinders were used.<br>
+    • Temperature variation → samples were kept under similar conditions.<br>
+    • Different containers → the same container was used for comparison.<br>
+    • Subjective observation → the same criterion was used to determine when layers disappeared.<br><br>
+
+
+    <strong>8. APPARATUS AND MATERIALS</strong><br><br>
+
+    • Transparent glass or plastic container<br>
+    • Water<br>
+    • Suitable miscible coloured liquids/solutions<br>
+    • Measuring cylinder<br>
+    • Dropper or spoon<br>
+    • Stopwatch<br>
+    • Thermometer, if available<br><br>
+
+
+    <strong>9. PROCEDURE</strong><br><br>
+
+    1. Two miscible liquids with different densities were prepared.<br>
+    2. The denser liquid was placed into a transparent container.<br>
+    3. The second liquid was carefully added along the side of the container.<br>
+    4. The interface between the liquids was observed.<br>
+    5. The stopwatch was started when layering was complete.<br>
+    6. Changes in the interface were recorded at regular intervals.<br>
+    7. The experiment was repeated with increased disturbance.<br>
+    8. The time taken for visible layering to disappear was compared.<br><br>
+
+
+    <strong>10. RESULTS, OBSERVATIONS AND ANALYSIS</strong><br><br>
+
+    Carefully layered liquids initially showed a visible boundary.
+
+    <br><br>
+
+    With time, the boundary became less distinct as diffusion occurred.
+
+    <br><br>
+
+    When the liquid was disturbed, mixing occurred much faster because
+    bulk fluid movement increased the transport of molecules.
+
+    <br><br>
+
+    <b>Analysis:</b><br>
+    The experiment demonstrated the difference between diffusion and
+    convection. Diffusion occurred gradually at the molecular scale,
+    whereas stirring, shaking or unstable density arrangements could
+    produce much faster bulk mixing.
+
+    <br><br>
+
+
+    <strong>11. CONCLUSION</strong><br><br>
+
+    Miscible liquids could temporarily form visible layers when they
+    were introduced carefully. The layers gradually disappeared because
+    molecular diffusion reduced the concentration difference. Strong
+    disturbance accelerated mixing through convection.
+
+    <br><br>
+
+    The hypothesis was supported if carefully layered samples remained
+    separated longer than strongly disturbed samples.
+
+  </div>
+</div>
+
+
+<!-- ===================== REPORT 4 ========================== -->
+
+<div class="research-box">
+
+  <h3>☕ Competition Research File 4</h3>
+  <h2>SPILL-RESISTANT CUP</h2>
+
+  <p>
+    Investigation into how liquid sloshing, walking frequency and cup
+    movement affect the likelihood of spilling.
+  </p>
+
+  <button class="access-btn" onclick="toggleReport('cup', this)">
+    🔓 GRANT ACCESS
+  </button>
+
+  <div id="cup" class="report-content hidden">
+
+    <strong>1. KEY WORDS AND DEFINITIONS</strong><br><br>
+
+    <b>Sloshing:</b> Oscillatory movement of liquid inside a container.<br>
+    <b>Frequency:</b> Number of oscillations occurring per second.<br>
+    <
+
 </section>
 
 <!-- ===== FOOTER ===== -->
