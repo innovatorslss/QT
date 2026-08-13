@@ -563,6 +563,225 @@ button:hover{
   }
 
   }
+  /* =========================================================
+   THEORETICAL RESEARCH ARCHIVE
+========================================================= */
+
+.theory-section{
+  padding:90px 30px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.theory-intro{
+  max-width:800px;
+  margin:0 auto 50px;
+  text-align:center;
+  color:#cdd7ff;
+  line-height:1.8;
+}
+
+.theory-card{
+  position:relative;
+  margin:35px auto;
+  padding:38px;
+  max-width:950px;
+  border-radius:28px;
+  background:rgba(255,255,255,0.055);
+  border:1px solid var(--border);
+  backdrop-filter:blur(16px);
+  box-shadow:0 0 25px rgba(0,229,255,0.08);
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.theory-card::before{
+  content:'';
+  position:absolute;
+  top:-100px;
+  right:-100px;
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(0,229,255,0.13),
+    transparent 70%
+  );
+  pointer-events:none;
+}
+
+.theory-card:hover{
+  transform:translateY(-5px);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.35),
+    0 0 30px rgba(0,229,255,0.18);
+}
+
+.theory-number{
+  font-family:'Orbitron',sans-serif;
+  font-size:0.85rem;
+  letter-spacing:3px;
+  color:var(--secondary);
+  margin-bottom:10px;
+}
+
+.theory-card h2{
+  font-family:'Orbitron',sans-serif;
+  color:var(--primary);
+  margin-bottom:25px;
+  line-height:1.4;
+}
+
+.theory-card h3{
+  font-family:'Orbitron',sans-serif;
+  color:var(--primary);
+  font-size:1rem;
+  letter-spacing:1px;
+  margin:28px 0 12px;
+}
+
+.theory-card p{
+  color:#d9e3ff;
+  line-height:1.85;
+  margin-bottom:16px;
+}
+
+.theory-question{
+  padding:20px;
+  margin-bottom:25px;
+  border-left:4px solid var(--secondary);
+  border-radius:12px;
+  background:rgba(168,85,247,0.07);
+}
+
+.theory-question strong{
+  display:block;
+  color:var(--secondary);
+  font-family:'Orbitron',sans-serif;
+  margin-bottom:8px;
+}
+
+.theory-question p{
+  margin:0;
+  color:#eef3ff;
+}
+
+.theory-equation{
+  margin:25px 0;
+  padding:18px;
+  text-align:center;
+  border-radius:16px;
+  background:rgba(0,229,255,0.06);
+  border:1px solid rgba(0,229,255,0.18);
+}
+
+.theory-equation span{
+  display:block;
+  color:#aebdff;
+  font-size:0.85rem;
+  margin-bottom:8px;
+}
+
+.theory-equation strong{
+  color:var(--primary);
+  font-family:'Orbitron',sans-serif;
+  font-size:1.05rem;
+}
+
+.theory-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:25px;
+}
+
+.theory-tags span{
+  padding:7px 12px;
+  border-radius:30px;
+  font-size:0.7rem;
+  letter-spacing:1px;
+  color:#dffcff;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(0,229,255,0.2);
+}
+
+.theory-warning{
+  margin-top:25px;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(255,170,0,0.07);
+  border:1px solid rgba(255,170,0,0.25);
+  color:#ffe6ad;
+  line-height:1.7;
+}
+
+.regime-box{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin:25px 0;
+}
+
+.regime-box > div{
+  padding:20px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.045);
+  border:1px solid rgba(0,229,255,0.15);
+}
+
+.regime-box strong{
+  display:block;
+  color:var(--primary);
+  font-family:'Orbitron',sans-serif;
+  font-size:0.8rem;
+  margin-bottom:10px;
+}
+
+.regime-box p{
+  font-size:0.9rem;
+  margin:0;
+}
+
+.theory-footer{
+  text-align:center;
+  margin:60px auto 20px;
+  padding:30px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(168,85,247,0.25);
+}
+
+.theory-footer strong{
+  font-family:'Orbitron',sans-serif;
+  color:var(--primary);
+  letter-spacing:2px;
+}
+
+.theory-footer p{
+  color:#bfcaff;
+  margin-top:10px;
+  line-height:1.7;
+}
+
+@media(max-width:700px){
+
+  .theory-section{
+    padding:60px 15px;
+  }
+
+  .theory-card{
+    padding:25px 20px;
+  }
+
+  .regime-box{
+    grid-template-columns:1fr;
+  }
+
+  .theory-card h2{
+    font-size:1.35rem;
+  }
+}
 </style>
 </head>
 
@@ -2654,7 +2873,504 @@ button:hover{
 
 </div>
 </section>
+<!-- =========================================================
+     UNSO 2026 • THEORETICAL RESEARCH ARCHIVE
+========================================================= -->
 
+<section class="theory-section" id="theory">
+
+  <h2 class="section-title">⚛️ THEORETICAL RESEARCH ARCHIVE</h2>
+
+  <p class="theory-intro">
+    The theoretical foundation behind the six UNSO 2026 Science Fight
+    problems. Each model explains the physical, chemical or biological
+    mechanism expected to govern the observed behaviour.
+  </p>
+
+
+  <!-- =======================================================
+       01 • PATTERNS IN CRACKING
+  ======================================================== -->
+
+  <article class="theory-card">
+
+    <div class="theory-number">01</div>
+
+    <h2>🧱 PATTERNS IN CRACKING</h2>
+
+    <div class="theory-question">
+      <strong>THEORETICAL QUESTION</strong>
+      <p>
+        Determine how material properties and external constraints
+        influence crack initiation and pattern formation.
+      </p>
+    </div>
+
+    <h3>THEORY</h3>
+
+    <p>
+      When a coating such as paint, mud or clay dries, liquid is removed
+      from the material. The particles move closer together and the
+      material tends to shrink.
+    </p>
+
+    <p>
+      If the drying layer is attached to a surface, however, it cannot
+      freely contract. The constraint produces internal mechanical
+      stress. When the stress becomes greater than the material's ability
+      to resist fracture, a crack can initiate.
+    </p>
+
+    <p>
+      Crack formation is therefore controlled by an interaction between
+      <strong>shrinkage, material strength, stiffness, adhesion and
+      external constraints</strong>.
+    </p>
+
+    <p>
+      During approximately uniform drying, cracks can form interconnected
+      polygon-like networks. The Reporter material identifies a
+      <strong>Voronoi-type pattern</strong> as a useful theoretical model
+      for comparing crack-cell geometry with experimental images.
+    </p>
+
+    <div class="theory-equation">
+      <span>Cracking condition:</span>
+      <strong>Stress &gt; Material Strength</strong>
+    </div>
+
+    <h3>KEY PHYSICAL IDEA</h3>
+
+    <p>
+      Greater shrinkage or stronger constraint can increase the stress
+      stored in the layer. Material properties determine how much stress
+      can be tolerated before fracture occurs, while drying conditions
+      influence how stress develops and redistributes.
+    </p>
+
+    <div class="theory-tags">
+      <span>SHRINKAGE</span>
+      <span>TENSILE STRESS</span>
+      <span>FRACTURE</span>
+      <span>ADHESION</span>
+      <span>VORONOI PATTERNS</span>
+    </div>
+
+  </article>
+
+
+  <!-- =======================================================
+       02 • TERMITE MOUND VENTILATION
+  ======================================================== -->
+
+  <article class="theory-card">
+
+    <div class="theory-number">02</div>
+
+    <h2>🐜 TERMITE MOUND VENTILATION</h2>
+
+    <div class="theory-question">
+      <strong>THEORETICAL QUESTION</strong>
+      <p>
+        How does the mound breathe, and what controls it?
+      </p>
+    </div>
+
+    <h3>THEORY</h3>
+
+    <p>
+      A termite mound can be considered a complex ventilation structure
+      containing interconnected chambers and passages. Air can move
+      through these passages while heat and gases are exchanged with
+      the surrounding environment.
+    </p>
+
+    <p>
+      One important physical mechanism is <strong>buoyancy</strong>.
+      Temperature differences cause differences in air density. Warmer
+      air is generally less dense than cooler air, so temperature
+      gradients can contribute to air movement.
+    </p>
+
+    <p>
+      However, ventilation is not necessarily explained by hot air rising
+      alone. Mound geometry, porosity, thermal properties and external
+      airflow can interact to produce circulation.
+    </p>
+
+    <p>
+      Research presented in the Reporter material specifically warns that
+      the mechanism should not be oversimplified. The airflow mechanism
+      must be tested against the structure being modelled.
+    </p>
+
+    <div class="theory-equation">
+      <span>Conceptual relationship:</span>
+      <strong>Temperature Gradient + Mound Geometry → Airflow</strong>
+    </div>
+
+    <h3>MODEL LIMITATION</h3>
+
+    <p>
+      A simplified mound model cannot reproduce every tunnel, chamber,
+      biological activity or environmental interaction present in a real
+      termite mound. Therefore, the model should capture the dominant
+      physical mechanism rather than reproduce every detail.
+    </p>
+
+    <div class="theory-warning">
+      ⚠️ <strong>Important:</strong>
+      A tracer can interfere with the phenomenon being measured.
+      For example, cool smoke is denser than warm air and can interfere
+      with a measurement intended to study buoyancy.
+    </div>
+
+    <div class="theory-tags">
+      <span>BUOYANCY</span>
+      <span>CONVECTION</span>
+      <span>THERMAL GRADIENT</span>
+      <span>POROSITY</span>
+      <span>AIRFLOW</span>
+    </div>
+
+  </article>
+
+
+  <!-- =======================================================
+       03 • GROWTH UNDER CONSTRAINT
+  ======================================================== -->
+
+  <article class="theory-card">
+
+    <div class="theory-number">03</div>
+
+    <h2>🧬 GROWTH UNDER CONSTRAINT</h2>
+
+    <div class="theory-question">
+      <strong>THEORETICAL QUESTION</strong>
+      <p>
+        Investigate how the dominant factors limiting growth evolve over
+        time in confined biological systems. Identify and characterize
+        distinct growth regimes and determine the conditions under which
+        transitions occur.
+      </p>
+    </div>
+
+    <h3>THEORY</h3>
+
+    <p>
+      Biological populations do not necessarily grow at a constant rate.
+      When resources are initially abundant, a population can increase
+      rapidly because individuals reproduce and sufficient resources are
+      available.
+    </p>
+
+    <p>
+      As population density increases, limitations begin to become
+      important. Individuals may compete for nutrients, space, oxygen or
+      other resources. Waste products can also accumulate.
+    </p>
+
+    <p>
+      The system can therefore pass through different <strong>growth
+      regimes</strong>.
+    </p>
+
+    <div class="regime-box">
+      <div>
+        <strong>REGIME 1 • GROWTH</strong>
+        <p>
+          Resources are sufficiently available and population size
+          increases.
+        </p>
+      </div>
+
+      <div>
+        <strong>REGIME 2 • SLOWING</strong>
+        <p>
+          Limiting factors increasingly restrict growth and the growth
+          rate decreases.
+        </p>
+      </div>
+
+      <div>
+        <strong>REGIME 3 • SATURATION</strong>
+        <p>
+          Growth approaches a limit because environmental constraints
+          prevent sustained population increase.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      Confinement can strengthen these limitations because reducing the
+      available space changes population density and the accessibility
+      of resources.
+    </p>
+
+    <p>
+      The Reporter material uses yeast in a large dish as an example of
+      an unconstrained baseline and yeast in a small dish as the
+      constrained experimental system.
+    </p>
+
+    <div class="theory-equation">
+      <span>Conceptual model:</span>
+      <strong>Growth Rate = Reproduction − Limitations</strong>
+    </div>
+
+    <div class="theory-tags">
+      <span>POPULATION GROWTH</span>
+      <span>CONFINEMENT</span>
+      <span>LIMITING FACTORS</span>
+      <span>COMPETITION</span>
+      <span>SATURATION</span>
+    </div>
+
+  </article>
+
+
+  <!-- =======================================================
+       04 • SPILL RESISTANT CUP
+  ======================================================== -->
+
+  <article class="theory-card">
+
+    <div class="theory-number">04</div>
+
+    <h2>🥤 SPILL RESISTANT CUP</h2>
+
+    <div class="theory-question">
+      <strong>THEORETICAL QUESTION</strong>
+      <p>
+        Carrying a cup of liquid while walking often leads to spilling,
+        yet certain motion patterns reduce spillage. Determine the
+        conditions under which spillage is minimized and explain the
+        underlying principles.
+      </p>
+    </div>
+
+    <h3>THEORY</h3>
+
+    <p>
+      Liquid inside a moving cup behaves as a dynamic system. When the
+      cup moves periodically, the liquid surface oscillates. This motion
+      is known as <strong>sloshing</strong>.
+    </p>
+
+    <p>
+      The liquid has a characteristic <strong>natural frequency</strong>.
+      If the frequency of the external walking motion approaches the
+      natural frequency of the liquid system, the system can experience
+      <strong>resonance</strong>.
+    </p>
+
+    <p>
+      At resonance, energy from the repeated driving motion is transferred
+      efficiently into the liquid oscillation. The wave amplitude can
+      therefore become much larger, increasing the probability of
+      spilling.
+    </p>
+
+    <div class="theory-equation">
+      <span>Simplified model from the Reporter:</span>
+      <strong>ω₀ ≈ √(g / D)</strong>
+    </div>
+
+    <p>
+      Here <strong>ω₀</strong> represents the natural frequency,
+      <strong>g</strong> represents gravitational acceleration and
+      <strong>D</strong> represents the cup diameter in the simplified
+      model.
+    </p>
+
+    <p>
+      Therefore, the theoretical prediction is that maximum sloshing
+      occurs when the driving frequency approaches the natural frequency.
+      To reduce resonance-driven spilling, the walking frequency should
+      avoid this resonance region.
+    </p>
+
+    <div class="theory-equation">
+      <span>Resonance condition:</span>
+      <strong>ω ≈ ω₀ → Maximum Sloshing</strong>
+    </div>
+
+    <div class="theory-tags">
+      <span>SLOSHING</span>
+      <span>RESONANCE</span>
+      <span>NATURAL FREQUENCY</span>
+      <span>OSCILLATION</span>
+      <span>DRIVING FREQUENCY</span>
+    </div>
+
+  </article>
+
+
+  <!-- =======================================================
+       05 • LAYERING OF MISCIBLE LIQUIDS
+  ======================================================== -->
+
+  <article class="theory-card">
+
+    <div class="theory-number">05</div>
+
+    <h2>🌊 LAYERING OF MISCIBLE LIQUIDS</h2>
+
+    <div class="theory-question">
+      <strong>THEORETICAL QUESTION</strong>
+      <p>
+        Determine the conditions under which transient stratification
+        persists or breaks down.
+      </p>
+    </div>
+
+    <h3>THEORY</h3>
+
+    <p>
+      Miscible liquids are liquids that can mix with one another rather
+      than forming permanently separate phases. However, two miscible
+      liquids can temporarily remain layered after being placed together.
+    </p>
+
+    <p>
+      This temporary arrangement is called <strong>transient
+      stratification</strong>.
+    </p>
+
+    <p>
+      The sharp boundary between the liquids gradually becomes less
+      distinct because molecules move from regions of higher
+      concentration toward regions of lower concentration. This process
+      is known as <strong>diffusion</strong>.
+    </p>
+
+    <p>
+      The stability of the initial layers can also be affected by
+      differences in density and temperature. If the arrangement creates
+      an unstable density structure, fluid motion can accelerate mixing.
+    </p>
+
+    <p>
+      The Reporter framework identifies the temperature difference between
+      the liquids as a possible independent variable and the time until
+      the boundary breaks down as a dependent variable.
+    </p>
+
+    <div class="theory-equation">
+      <span>Conceptual process:</span>
+      <strong>Sharp Boundary → Diffusion/Motion → Blurred Boundary</strong>
+    </div>
+
+    <p>
+      Therefore, a theoretical graph of boundary sharpness against time
+      is expected to show decreasing sharpness as the initially layered
+      system progresses toward mixing.
+    </p>
+
+    <div class="theory-tags">
+      <span>DIFFUSION</span>
+      <span>DENSITY</span>
+      <span>STRATIFICATION</span>
+      <span>MISCIBLE LIQUIDS</span>
+      <span>MIXING</span>
+    </div>
+
+  </article>
+
+
+  <!-- =======================================================
+       06 • METAL RUSTING PATTERNS
+  ======================================================== -->
+
+  <article class="theory-card">
+
+    <div class="theory-number">06</div>
+
+    <h2>🔩 METAL RUSTING PATTERNS</h2>
+
+    <div class="theory-question">
+      <strong>THEORETICAL QUESTION</strong>
+      <p>
+        Examine how interactions between material, environment and
+        chemical conditions lead to the emergence of spatial corrosion
+        patterns.
+      </p>
+    </div>
+
+    <h3>THEORY</h3>
+
+    <p>
+      Rusting is an electrochemical corrosion process involving iron,
+      water and oxygen. Different regions of the metal surface can behave
+      differently depending on the local chemical environment.
+    </p>
+
+    <p>
+      Under a water droplet, oxygen concentration is not necessarily
+      uniform. Differences in oxygen availability can create local
+      electrochemical regions.
+    </p>
+
+    <p>
+      In the simplified electrochemical model, an oxygen-poor region can
+      behave as an <strong>anode</strong>, where iron is oxidized and
+      enters the surrounding solution as iron ions.
+    </p>
+
+    <p>
+      A region with greater oxygen availability can behave as a
+      <strong>cathode</strong>. The resulting electrochemical reactions
+      contribute to the formation of iron oxides and hydroxides associated
+      with rust.
+    </p>
+
+    <div class="theory-equation">
+      <span>Electrochemical idea:</span>
+      <strong>Anode → Iron Oxidation</strong>
+    </div>
+
+    <p>
+      Because the chemical conditions vary spatially across the metal
+      surface, corrosion does not necessarily occur uniformly. This can
+      produce visible patterns such as rings or localized corrosion
+      regions.
+    </p>
+
+    <p>
+      The Reporter material gives a rust ring at the edge of a saltwater
+      droplet as an example and explains it using an oxygen-depleted
+      central anode and an oxygen-rich peripheral cathode.
+    </p>
+
+    <div class="theory-warning">
+      ⚠️ <strong>Important experimental point:</strong>
+      Droplet size and geometry must be controlled. If larger droplets
+      are used for one salt concentration, the oxygen gradient can change,
+      creating a confounding variable.
+    </div>
+
+    <div class="theory-tags">
+      <span>CORROSION</span>
+      <span>OXIDATION</span>
+      <span>ANODE</span>
+      <span>CATHODE</span>
+      <span>OXYGEN GRADIENT</span>
+      <span>SPATIAL PATTERNS</span>
+    </div>
+
+  </article>
+
+
+  <div class="theory-footer">
+    <strong>QUANTUM TITANS • THEORY CORE</strong>
+    <p>
+      Theory provides the prediction. Experiment tests the prediction.
+      The comparison between them is the scientific argument.
+    </p>
+  </div>
+
+</section>
 <!-- ===== FOOTER ===== -->
 
 <footer>
